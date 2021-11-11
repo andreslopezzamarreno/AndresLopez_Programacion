@@ -1,6 +1,6 @@
 public class CamionCalabazas {
     public static void main(String args[]) {
-        
+
         int caja = 8;
         int camion1 = 3464;
         int camion2 = camion1 - 664;
