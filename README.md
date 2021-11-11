@@ -1,3 +1,5 @@
 # AndresLopez_Programacion-
 
-## cambio realizado en el repositorio local 
+## cambio local 
+
+###Cambio desde repositorio de red
