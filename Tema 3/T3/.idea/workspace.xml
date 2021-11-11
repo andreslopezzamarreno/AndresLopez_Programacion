@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cd67975-e007-4c44-a5e4-144ae677a095" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EjerciciosCondicionales4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EjerciciosBucles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EjerciciosCondicionales1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EjerciciosCondicionales1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
