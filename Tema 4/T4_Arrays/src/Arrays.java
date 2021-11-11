@@ -10,11 +10,11 @@ public class Arrays {
 
         //sacar numero de elementos que tiene el array
         int longitudArray = numeros2.length;
-        //System.out.println(longitudArray);
+        System.out.println(longitudArray);
 
         //sacar valor de una posicion en concreto, dentro de los corchetes la posicion que me interese
         int posicionArray = numeros2[7];
-        //System.out.println(posicionArray);
+        System.out.println(posicionArray);
 
         for (int i = 0; i < numeros2.length; i++) {
             System.out.println(numeros2[i]);
