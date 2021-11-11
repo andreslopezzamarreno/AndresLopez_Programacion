@@ -1,5 +1,3 @@
-package ejsfor;
-
 import java.util.Scanner;
 public class BaseExponente {
     public static void main(String[] args) {

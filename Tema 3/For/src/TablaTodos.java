@@ -1,5 +1,3 @@
-package ejsfor;
-
 public class TablaTodos {
     public static void main(String[] args) {
 

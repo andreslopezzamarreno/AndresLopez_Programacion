@@ -1,5 +1,3 @@
-package ejsfor;
-
 import java.util.Scanner;
 public class ParesEntreDosDados {
     public static void main(String[] args) {
