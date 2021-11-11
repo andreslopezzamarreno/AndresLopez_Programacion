@@ -1,4 +1,3 @@
-package dowhile;
 
 import java.util.Scanner;
 

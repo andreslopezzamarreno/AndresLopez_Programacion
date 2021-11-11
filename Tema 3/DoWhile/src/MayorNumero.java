@@ -1,5 +1,3 @@
-package dowhile;
-
 public class MayorNumero {
     public static void main(String[] args) {
         int numAleatorio;
