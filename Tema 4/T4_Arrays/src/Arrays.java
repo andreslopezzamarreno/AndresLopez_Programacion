@@ -34,7 +34,7 @@ public class Arrays {
             System.out.println(numerosAleatorios[i]);
         }
 
-
+        //cuantos pares e impares hay
         int pares=0;
         int impares=0;
         for(int i = 0; i < numerosAleatorios.length; i++) {
