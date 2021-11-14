@@ -49,7 +49,7 @@ public class Arrays {
         System.out.println("Hay " + pares + " numeros pares");
         System.out.println("Hay " + impares + " numeros impares ");
 
-        //La super clase de java 
+        //La super clase de java
         Object[] cositas = {true, 1, 4.643 , "hola", 'c'};
 
     }
