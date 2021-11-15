@@ -16,8 +16,18 @@ public class MayorArray {
             System.out.println("Introduce valor para la posicion " + i);
             enteros[i] = sc.nextInt();
         }
-        for (int i = 0; i < enteros.length; i++) {
 
+        for (int i = 0; i < enteros.length; i++) {
+            if (enteros[i]>max){
+                max = enteros[i];
+            }else if(enteros[i]<min){
+                min = enteros[i];
+            }
         }
+        for (int numero: enteros) {
+            System.out.println(numero);
+        }
+        System.out.println("El mayor es " + max);
+        System.out.println("El menor es " + min);
     }
 }

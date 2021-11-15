@@ -7,18 +7,17 @@ public class Ejercicio4 {
         System.out.println("Array numero");
         for (int i = 0; i < 20; i++) {
             numero[i] = (int) (Math.random() * 101);
+        }
+        for (int i = 0; i < 20; i++) {
             cuadrado[i] = (int) Math.pow(numero[i], 2);
+        }
+        for (int i = 0; i < 20; i++) {
             cubo[i] = (int) Math.pow(numero[i], 3);
-            System.out.println(numero[i]);
+        }
 
-        }
-        System.out.println("\nArray cuadrado: Elementos Array cuadrado elevado a 2");
-        for (int i = 0; i < 20; i++) {
-            System.out.println(cuadrado[i]);
-        }
-        System.out.println("\nArray cubo: Elementos Array cuadrado elevado a 3");
-        for (int i = 0; i < 20; i++) {
-            System.out.println(cubo[i]);
+        System.out.print("NUMERO\tCUADRADO\tCUBO \n");
+        for (int i = 0; i < numero.length; i++) {
+            System.out.print(numero[i] + " \t\t " + cuadrado[i] + " \t    " + cubo[i] + "\n");
         }
 
     }
