@@ -20,7 +20,8 @@ public class MayorArray {
         for (int i = 0; i < enteros.length; i++) {
             if (enteros[i]>max){
                 max = enteros[i];
-            }else if(enteros[i]<min){
+            }
+            if(enteros[i]<min){
                 min = enteros[i];
             }
         }
