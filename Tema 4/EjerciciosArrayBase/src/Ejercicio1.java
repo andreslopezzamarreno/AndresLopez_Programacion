@@ -6,7 +6,7 @@ public class Ejercicio1 {
 
         int[] numeros = new int[10];
         int contador = -1;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < numeros.length; i++) {
             System.out.println("Introduce numero ");
             numeros[i] = sc.nextInt();
         }
