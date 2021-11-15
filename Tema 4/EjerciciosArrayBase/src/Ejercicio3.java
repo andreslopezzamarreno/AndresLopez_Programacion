@@ -11,11 +11,19 @@ public class Ejercicio3 {
             numerosAleatorios[i] = sc.nextInt();
         }
         for (int i = 9; i >= 0; i--) {
-            System.out.println(numerosAleatorios[i]);
-
+            if (i>0){
+                System.out.print(numerosAleatorios[i] + ", \t ");
+            }else {
+                System.out.print(numerosAleatorios[i] + " \t ");
+            }
         }
+        System.out.printf("\n");
         for (int i = 0; i < 10; i++) {
-            System.out.println(i);
+            if (i<9){
+                System.out.print(numerosAleatorios[i] + ", \t ");
+            }else {
+                System.out.print(numerosAleatorios[i] + " \t ");
+            }
         }
     }
 }
