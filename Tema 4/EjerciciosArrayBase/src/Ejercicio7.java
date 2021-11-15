@@ -17,12 +17,12 @@ public class Ejercicio7 {
             System.out.println("Introduce palabra:");
             palabras[i] = sc.next();
         }
-        do{
+        do {
             System.out.println("Que quieres hacer ?");
             System.out.println("1.Mostrar todas las palabras\n2.Obtener una palabra al azar\n3.Ver número de letras totales en el Array\n" +
                     "4.Ver media de letras\n5.Ver palabra con más letras\n6.Ver palabra con menos letras\n0.Salir");
             opcion = sc.nextInt();
-            switch (opcion){
+            switch (opcion) {
                 case 1:
                     //Mostrar todas las palabras
                     for (int i = 0; i < 10; i++) {
@@ -31,7 +31,7 @@ public class Ejercicio7 {
                     break;
                 case 2:
                     //Obtener una palabra al azar
-                    System.out.println(palabras[(int) (Math.random()*10)]);
+                    System.out.println(palabras[(int) (Math.random() * 10)]);
                     break;
                 case 3:
                     //Ver número de letras totales en el Array
@@ -49,14 +49,14 @@ public class Ejercicio7 {
                         palabra = palabras[i];
                         numeroLetras += palabra.length();
                     }
-                    mediaLetras =(double) numeroLetras/(double) palabras.length;
+                    mediaLetras = (double) numeroLetras / (double) palabras.length;
                     System.out.println("La media de letras por palabras es " + mediaLetras);
                     break;
                 case 5:
                     //Ver palabra con más letras
                     for (int i = 0; i < 10; i++) {
                         palabra = palabras[i];
-                        if (palabra.length() > maxPalabra.length()){
+                        if (palabra.length() > maxPalabra.length()) {
                             maxPalabra = palabras[i];
                         }
                     }
@@ -66,13 +66,13 @@ public class Ejercicio7 {
                     //Ver palabra con menos letras
                     for (int i = 0; i < 10; i++) {
                         palabra = palabras[i];
-                        if (palabra.length() < minPalabra.length()){
+                        if (palabra.length() < minPalabra.length()) {
                             minPalabra = palabras[i];
                         }
                     }
                     System.out.println("La palabra con menos letras es " + minPalabra);
                     break;
             }
-        }while (opcion != 0);
+        } while (opcion != 0);
     }
 }

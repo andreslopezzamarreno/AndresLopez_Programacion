@@ -9,7 +9,7 @@ public class Ejercicio2 {
             suma += numeros[i];
         }
 
-        media = (double) suma / (double)numeros.length;
+        media = (double) suma / (double) numeros.length;
 
         System.out.println("La suma total de puntos es: " + suma);
         System.out.println("La media de los puntos es: " + media);
