@@ -4,7 +4,6 @@ public class Ejercicio4 {
         int[] cuadrado = new int[20];
         int[] cubo = new int[20];
 
-        System.out.println("Array numero");
         for (int i = 0; i < 20; i++) {
             numero[i] = (int) (Math.random() * 101);
         }
