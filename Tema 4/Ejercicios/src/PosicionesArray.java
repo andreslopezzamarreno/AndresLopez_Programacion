@@ -17,12 +17,9 @@ public class PosicionesArray {
         for (int i = 0; i < posiciones; i++) {
             System.out.println("introduc el valor de la posicion " + i);
             numeros[i] = sc.nextInt();
-        }
-
-        //copio el array en otro array
-        for (int i = 0; i < posiciones; i++) {
             numeros2[i] = numeros[i];
         }
+        
 
         //el valor de la posicion pasa a una mas
         posfin = numeros[posiciones -1];
