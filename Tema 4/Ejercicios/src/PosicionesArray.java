@@ -19,7 +19,7 @@ public class PosicionesArray {
             numeros[i] = sc.nextInt();
             numeros2[i] = numeros[i];
         }
-        
+
 
         //el valor de la posicion pasa a una mas
         posfin = numeros[posiciones -1];
