@@ -23,7 +23,7 @@ public class PosicionesArray {
 
         //el valor de la posicion pasa a una mas
         posfin = numeros[posiciones -1];
-        for (int i = posiciones-1; i >= 0; i--) {
+        for (int i = posiciones-1; i >=0; i--) {
             if (i != 0){
                 numeros[i] = numeros[i-1];
             } else {
