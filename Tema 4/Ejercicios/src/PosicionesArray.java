@@ -43,7 +43,11 @@ public class PosicionesArray {
 
         //muestro en consola
         for (int i = 0; i < posiciones; i++) {
-            System.out.println(numeros[i] + "\t" + numeros2[i]);
+            System.out.printf(numeros[i] + ", ");
+        }
+        System.out.println("");
+        for (int i = 0; i < posiciones; i++) {
+            System.out.printf(numeros2[i] + ", ");
         }
     }
 }
