@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class MayorArray {
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class MayorArray {
             enteros[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < enteros.length; i++) {
+        /*for (int i = 0; i < enteros.length; i++) {
             if (enteros[i]>max){
                 max = enteros[i];
             }
@@ -26,10 +27,16 @@ public class MayorArray {
                 min = enteros[i];
             }
         }
+        System.out.println("El mayor es " + max);
+        System.out.println("El menor es " + min);*/
+
+        Arrays.sort(enteros);
+
         for (int numero: enteros) {
             System.out.println(numero);
         }
-        System.out.println("El mayor es " + max);
-        System.out.println("El menor es " + min);
+
+        System.out.println("El mayor es " + enteros[enteros.length -1]);
+        System.out.println("El menor es " + enteros[0]);
     }
 }
