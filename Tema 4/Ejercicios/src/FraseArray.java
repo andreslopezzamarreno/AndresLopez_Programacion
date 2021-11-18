@@ -6,9 +6,7 @@ public class FraseArray {
 
         String [] frase = new String[10];
         System.out.println("Introduce una frase ");
-        for (int i = 0; i < frase.length; i++) {
-            frase[i] = sc.next();
-        }
+
         for (int i = 0; i < frase.length; i++) {
             System.out.println(frase[i]);
         }
