@@ -12,6 +12,9 @@ public class SumaAristas {
         columnas = sc.nextInt();
 
         for (int i = 0; i < numerosAleatorios.length; i++) {
+            for (int j = 0; j < numerosAleatorios[i].length; j++) {
+                
+            }
 
 
         }
