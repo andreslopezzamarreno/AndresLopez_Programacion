@@ -30,7 +30,7 @@ public class MultidimensionalAlumno {
                     suspensas++;
                 }
             }
-            if ((boolean) alumnos[i][4]){ 
+            if ((boolean) alumnos[i][4]){
                 System.out.println(alumnos[i][0] + " tiene una nota media de " + (double)suma/3 + ", tiene " + suspensas + " asignaturas suspensas y tiene asignaturas convalidadas");
             }else{
                 System.out.println(alumnos[i][0] + " tiene una nota media de " + (double)suma/3 + ", tiene " + suspensas + " asignaturas suspensas y no tiene asignaturas convalidadas");
