@@ -15,11 +15,11 @@ public class SumaAristas {
         filas = sc.nextInt();
         System.out.println("Cuantas columnas tendrá el Array");
         columnas = sc.nextInt();
-        numerosAleatorios = new int[filas][ columnas];
+        numerosAleatorios = new int[filas][columnas];
 
         for (int i = 0; i < numerosAleatorios.length; i++) {
             for (int j = 0; j < numerosAleatorios[i].length; j++) {
-                numerosAleatorios[i][j] =(int) (Math.random()*21);
+                numerosAleatorios[i][j] = (int) (Math.random() * 21);
                 System.out.print(numerosAleatorios[i][j] + " ");
             }
             System.out.println();
@@ -43,17 +43,22 @@ public class SumaAristas {
             }
         }*/
         int numeroFila = 0;
-        for (int[] item : numerosAleatorios) {
+        for (int[] fila : numerosAleatorios) {
+            for (int columna : fila) {
+                if (numeroFila == 0) {
+                    sumatorioFila1 += columna;
+                }
+                if (numeroFila == filas-1) {
+                    sumatorioFilaN += columna;
+                }
 
-            
+            }
             numeroFila++;
-
-
         }
-        System.out.println("la suma de la primera fila es: "+sumatorioFila1);
-        System.out.println("la suma de la ultima fila es: "+sumatorioFilaN);
-        System.out.println("la suma de la primera columna es: "+sumatorioColumna1);
-        System.out.println("la suma de la ultima columna es: "+sumatorioColumnaN);
+        System.out.println("la suma de la primera fila es: " + sumatorioFila1);
+        System.out.println("la suma de la ultima fila es: " + sumatorioFilaN);
+        System.out.println("la suma de la primera columna es: " + sumatorioColumna1);
+        System.out.println("la suma de la ultima columna es: " + sumatorioColumnaN);
         sc.close();
     }
 }
