@@ -25,9 +25,6 @@ public class MultidimensionalAutomatico {
                     System.out.printf("*  ");
                 }
             }
-            /*for (int j = 0; j < numColumnas; j++) {
-                System.out.printf("*  ");
-            }*/
             System.out.println();
         }
     }
