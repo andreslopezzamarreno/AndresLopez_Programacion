@@ -6,6 +6,10 @@ public class SumaAristas {
 
         int filas, columnas;
         int numerosAleatorios[][];
+        int sumatorioFila1;
+        int sumatorioFilaN;
+        int sumatorioColumna1;
+        int sumatorioColumnaN;
 
         System.out.println("Cuantas filas tendrá el Array");
         filas = sc.nextInt();
@@ -19,6 +23,16 @@ public class SumaAristas {
                 System.out.print(numerosAleatorios[i][j] + " ");
             }
             System.out.println();
+        }
+        for (int i = 0; i < numerosAleatorios.length; i++) {
+            for (int j = 0; j < numerosAleatorios[i].length; j++) {
+                if (i == 0 ){
+                    sumatorioFila1 += numerosAleatorios [i][j];
+                }
+                
+            }
+
+
         }
 
         sc.close();
