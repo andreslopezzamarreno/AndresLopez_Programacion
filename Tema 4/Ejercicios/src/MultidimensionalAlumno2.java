@@ -79,7 +79,7 @@ public class MultidimensionalAlumno2 {
                         System.out.println("De que alumno quieres ver los datos ");
                         alumnos = sc.next();
                     }
-                    
+
 
                     break;
                 case 5:
