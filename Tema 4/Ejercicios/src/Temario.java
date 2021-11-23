@@ -1,13 +1,14 @@
 public class Temario {
     public static void main(String[] args) {
-        String [] temario = {"Tema 1: Introducción","Tema 2: Identificadores","Tema 3: Estructuras","Tema 4: Colecciones",
-                "Tema 5: Orientación a objetos", "Tema 6: Clases y Objetos", "Tema 7; Abstracción, Herencia y Polimorfismo",
-                "Tema 8: Ficheros y Excepciones", "Tema 9: Bases de datos", "Tema 10: Interfaces"};
+        String [] temario = {" Introducción"," Identificadores"," Estructuras"," Colecciones",
+                " Orientación a objetos", " Clases y Objetos", " Abstracción, Herencia y Polimorfismo",
+                " Ficheros y Excepciones", " Bases de datos", " Interfaces"};
 
         System.out.println("Número de temas: " + temario.length);
 
-        for (String tema: temario) {
-            System.out.println(tema);
+        for (int i = 0; i < temario.length; i++) {
+            System.out.print("Tema: " + (i+1));
+            System.out.println(temario[i]);
         }
     }
 }
