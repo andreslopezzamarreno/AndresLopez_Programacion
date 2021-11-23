@@ -8,6 +8,7 @@ public class MultidimensionalAlumno2 {
         int numAlumnos = 0;
         Object[][] alumno = new Object[1][1];
         int sumaNotas = 0;
+        String alumnos = "";
 
         do {
             System.out.println("1.Definir el número de alumnos a registrar\n2.Registrar alumnos\n3.Ver datos de alumnos con nota media\n4.Ver datos de un alumno concreto\n5.Ver medias de la asignatura 1\n" +
@@ -63,9 +64,9 @@ public class MultidimensionalAlumno2 {
                             System.out.println("Nota 2: " + alumno[i][2]);
                             System.out.println("Nota 3: " + alumno[i][3]);
                             for (int j = 1; j < alumno[i].length; j++) {
-                                sumaNotas += (double)alumno[i][j];
+                                sumaNotas += (int)alumno[i][j];
                             }
-                            System.out.println("Nota media: %.2f" + (double)sumaNotas/3);
+                            System.out.println("Nota media: " +(double) sumaNotas/3);
                             sumaNotas = 0;
                         }
                     }
@@ -74,7 +75,15 @@ public class MultidimensionalAlumno2 {
                     if (numAlumnos <= 1) {
                         System.out.println("Error. No hay alumnos registrados\n");
                     }else{
-                        System.out.println("De que alumno quieres ver los daos ");
+                        System.out.println("De que alumno quieres ver los datos ");
+                        alumnos = sc.next();
+                    }
+                    for (int i = 0; i < 5; i++) {
+                        if(alumnos == alumno[i][0]){
+                            for (int j = 0; j < alumno[i].length; j++) {
+                                System.out.println(alumno[i][j]);
+                            }
+                        }
                     }
                     break;
                 case 5:
