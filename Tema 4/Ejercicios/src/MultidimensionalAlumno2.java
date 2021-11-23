@@ -78,10 +78,13 @@ public class MultidimensionalAlumno2 {
                     }
                     break;
                 case 5:
+                    
                     break;
                 case 6:
+
                     break;
                 case 7:
+
                     break;
                 default:
                     System.out.println("Opcion no valida");
