@@ -11,7 +11,9 @@ public class Loteria {
 
         for (int i = 0; i < boleto.length; i++) {
             boleto[i] = (int) (Math.random() * 10);
+            System.out.print(boleto[i]);
         }
+        System.out.println();
         for (int i = 0; i < numeroIntro.length; i++) {
             System.out.println("Introduce numero de la posicion " + i);
             numeroIntro[i] = sc.nextInt();
