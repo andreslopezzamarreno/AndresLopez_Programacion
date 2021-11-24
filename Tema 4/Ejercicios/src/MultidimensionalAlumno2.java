@@ -9,6 +9,7 @@ public class MultidimensionalAlumno2 {
         Object[][] alumno = new Object[1][1];
         int sumaNotas = 0;
         String alumnos = "";
+        double media = 0;
 
         do {
             System.out.println("1.Definir el número de alumnos a registrar\n2.Registrar alumnos\n3.Ver datos de alumnos con nota media\n4.Ver datos de un alumno concreto\n5.Ver medias de la asignatura 1\n" +
@@ -79,23 +80,62 @@ public class MultidimensionalAlumno2 {
                         System.out.println("De que alumno quieres ver los datos ");
                         alumnos = sc.next();
                     }
-
-
+                    for (int i = 0; i < alumno.length; i++) {
+                        for (int j = 0; j < 1; j++) {
+                            if (alumno[i][j].equals(alumnos)) {
+                                System.out.println("Nombre: " + alumno[i][0]);
+                                System.out.println("Nota 1: " + alumno[i][1]);
+                                System.out.println("Nota 2: " + alumno[i][2]);
+                                System.out.println("Nota 3: " + alumno[i][3]);
+                            }
+                        }
+                    }
                     break;
                 case 5:
-
+                    if (numAlumnos <= 1) {
+                        System.out.println("Error. No hay alumnos registrados\n");
+                    } else {
+                        for (int i = 0; i < alumno.length; i++) {
+                            for (int j = 1; j < alumno[i].length - 2; j++) {
+                                media += (int) alumno[i][1];
+                            }
+                        }
+                        media /= alumno.length;
+                        System.out.println("La media de la asignatura 1 es: " + media);
+                        media = 0;
+                    }
                     break;
                 case 6:
-
+                    if (numAlumnos <= 1) {
+                        System.out.println("Error. No hay alumnos registrados\n");
+                    } else {
+                        for (int i = 0; i < alumno.length; i++) {
+                            for (int j = 2; j < alumno[i].length - 1; j++) {
+                                media += (int) alumno[i][2];
+                            }
+                        }
+                        media /= alumno.length;
+                        System.out.println("La media de la asignatura 2 es: " + media);
+                    }
+                    media = 0;
                     break;
                 case 7:
-
+                    if (numAlumnos <= 1) {
+                        System.out.println("Error. No hay alumnos registrados\n");
+                    } else {
+                        for (int i = 0; i < alumno.length; i++) {
+                            for (int j = 3; j < alumno[i].length; j++) {
+                                media += (int) alumno[i][3];
+                            }
+                        }
+                        media /= alumno.length;
+                        System.out.println("La media de la asignatura 3 es: " + media);
+                    }
+                    media = 0;
                     break;
                 default:
                     System.out.println("Opcion no valida");
             }
-
-
         } while (opcion != 8);
     }
 }
