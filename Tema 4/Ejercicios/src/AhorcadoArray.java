@@ -1,6 +1,6 @@
 
 
-//sin terminar 
+//sin terminar
 
 
 import java.util.Scanner;
