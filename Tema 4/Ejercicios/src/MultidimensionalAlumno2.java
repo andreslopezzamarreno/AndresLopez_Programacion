@@ -6,7 +6,7 @@ public class MultidimensionalAlumno2 {
 
         int opcion;
         int numAlumnos = 0;
-        Object[][] alumno = new Object[1][1];
+        Object[][] alumno= new Object[1][1];
         int sumaNotas = 0;
         String alumnos = "";
         double media = 0;
