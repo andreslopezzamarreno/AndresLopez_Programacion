@@ -7,7 +7,7 @@ public class Temario {
         System.out.println("Número de temas: " + temario.length);
 
         for (int i = 0; i < temario.length; i++) {
-            System.out.print("Tema: " + (i+1));
+            System.out.print("Tema " + (i+1) + ": ");
             System.out.println(temario[i]);
         }
     }
