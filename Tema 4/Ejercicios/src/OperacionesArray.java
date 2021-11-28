@@ -48,10 +48,14 @@ public class OperacionesArray {
             numeros[i] = numeros[i+1];
             numeros[i+1]= numerito;
         }*/
+        
         int plus = 1;
         for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = numeros[numeros.length-plus];
-
+            int numerito = numeros[i];
+            if ( i <=4) {
+                numeros[i] = numeros[numeros.length - plus];
+                numeros[numeros.length-plus] = numerito;
+            }
             plus++;
         }
 
