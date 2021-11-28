@@ -7,23 +7,43 @@ import java.util.Scanner;
 
 public class AhorcadoArray {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String [] palabras = new String[20];
-        int aleat =(int) (Math.random()*21);
-        char letra;
-        final int vidas = 5;
+        String[] palabras = {"ordenador", "cesped", "casa", "teclado", "leche", "tinta", "mensajero", "hora", "publicidad", "congelador"};
+        int aleat = (int) (Math.random() * 11);
+        String letra;
+        int vidas = 5;
+        String palabro = palabras[aleat - 1];
+        int sumar = 0;
+        int reps = 0;
+        System.out.println(palabro.charAt(1));
         System.out.println(aleat);
 
-        for (int i = 0; i < palabras.length; i++) {
-            System.out.println("introduce palabra en la posicion " + i);
-            palabras[i] = sc.next();
-        }
-        String[] letras = new String[palabras[aleat-1].length()];
-        for (int i = 0; i < palabras[aleat-1].length(); i++) {
+        for (int i = 0; i < palabras[aleat - 1].length(); i++) {
             System.out.print("_ ");
         }
-        System.out.println("Prueba con una letra");
-        letra = sc.next().charAt(0);
+
+        do {
+            System.out.println("\nPrueba con una letra");
+            letra = sc.next();
+
+            if (palabras[aleat - 1].contains(letra)) {
+                do {
+                    if (palabro.charAt(sumar) == letra.charAt(0)) {
+                        System.out.print(letra + " ");
+
+                    } else {
+                        System.out.print("_ ");
+                    }
+                    sumar++;
+                } while (sumar<palabro.length());
+                sumar = 0;
+            } else {
+                vidas--;
+                System.out.println("Una vida menos te quedan " + vidas);
+            }
+
+            reps++;
+        } while (reps != palabro.length());
     }
 }

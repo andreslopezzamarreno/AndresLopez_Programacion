@@ -13,9 +13,6 @@ public class FraseArray {
         String [] frase;
         System.out.println("Introduce una frase ");
 
-        Arrays.asList(frase).a = sc.next();
-        System.out.println(frase.length);
-
 
     }
 }
