@@ -37,7 +37,7 @@ public class Ejercicio1 {
                     } else {
                         System.out.println("Error. El array aun no se ha creado.");
                     }
-                    System.out.println("");
+                    System.out.println();
                     break;
                 case 3:
                     System.out.println("Sacar posiciones donde el valor sea menor que 10 y par ");
