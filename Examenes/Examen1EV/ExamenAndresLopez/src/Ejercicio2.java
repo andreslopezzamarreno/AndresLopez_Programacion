@@ -36,6 +36,7 @@ public class Ejercicio2 {
                         System.out.println("Error. Opcion no valida");
                     }
                     break;
+
                 case 2:
                     System.out.println("Numero de refrescos");
                     numRefresco = sc.nextInt();
@@ -46,6 +47,7 @@ public class Ejercicio2 {
                         System.out.println("Error. Opcion no valida");
                     }
                     break;
+
                 case 3:
                     System.out.println("Numero de bocadillos");
                     numBocadillo = sc.nextInt();
@@ -56,6 +58,7 @@ public class Ejercicio2 {
                         System.out.println("Error. Opcion no valida");
                     }
                     break;
+
                 case 4:
                     System.out.println("Numero de menu");
                     numMenu = sc.nextInt();
@@ -66,6 +69,7 @@ public class Ejercicio2 {
                         System.out.println("Error. Opcion no valida");
                     }
                     break;
+
                 case 5:
                     total = totalBocadillo * BOCADILLO + totalRefresco * REFRESCO + totalMenu * MENU + totalCafe * CAFE;
                     if (total == 0) {
@@ -91,7 +95,5 @@ public class Ejercicio2 {
                     System.out.println("Opcion no valida. Prueba otra vez");
             }
         } while (opcion != 5);
-
-
     }
 }
