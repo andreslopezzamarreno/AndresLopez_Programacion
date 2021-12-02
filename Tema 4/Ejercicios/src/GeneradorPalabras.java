@@ -4,7 +4,7 @@ public class GeneradorPalabras {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        char[] abc = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        char[] abc = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'};
         String[] palabras;
         int num;
         System.out.println("Cuantas palabras quieres guardar?");
