@@ -7,7 +7,7 @@ public class GeneradorPalabras {
         char[] abc = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
         String[] palabras;
         int num;
-        System.out.println("Cuantas palabras quieres guardas");
+        System.out.println("Cuantas palabras quieres guardar?");
         num = sc.nextInt();
         palabras = new String[num];
 
