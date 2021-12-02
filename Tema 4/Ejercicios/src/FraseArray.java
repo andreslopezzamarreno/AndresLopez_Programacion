@@ -15,6 +15,9 @@ public class FraseArray {
             if (item.length()>larga.length()){
                 larga = item;
             }
+            if(item.length()==4){
+                System.out.println("palabra con exactamente 4 palabras: " + item);
+            }
         }
         System.out.println(corta);
         System.out.println(larga);
