@@ -11,7 +11,6 @@ public class InvisibleArray {
         int aleat2;
         ArrayList<Integer> pers = new ArrayList<>();
 
-
         do {
             System.out.println("Cuantas personas van a participar?(tiene que ser par)");
             numPers = sc.nextInt();

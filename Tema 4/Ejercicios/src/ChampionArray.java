@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class ChampionArray {
     public static void main(String[] args) {
 
@@ -7,34 +5,37 @@ public class ChampionArray {
         String[] bombo2 = {"Real Madrid", "Tottenham", "Nápoles", "B. Dortmund", "O. Lyon", "Chelsea", "Atalanta", "Atético de Madrid" };
         int aleat;
         int aleat2;
-        ArrayList<Integer> nums1 = new ArrayList<>();
-        ArrayList<Integer> nums2 = new ArrayList<>();
+        int [] nums1= {0,0,0,0,0,0,0,0};
+        int [] nums2= {0,0,0,0,0,0,0,0};
 
         for (int i = 0; i < bombo1.length; i++) {
 
             aleat = (int) (Math.random() * 8);
-            do {
-
-                if (!nums1.contains(aleat)) {
-                    nums1.add(aleat);
-                } else {
-                    aleat = (int) (Math.random() * 8);
-
-                }
-            } while (nums1.contains(aleat));
-
             aleat2 = (int) (Math.random() * 8);
-            do {
 
-                if (!nums2.contains(aleat2)) {
-                    nums2.add(aleat2);
-                } else {
-                    aleat2 = (int) (Math.random() * 8);
+            do {
+                for (int j = 0; j < nums1.length; j++) {
+                    if (nums1[j] == 0) {
+                        nums1[aleat] = aleat;
+                    } else {
+                        aleat = (int) (Math.random() * 8);
+                    }
                 }
-            } while (nums2.contains(aleat2));
+            } while (nums1[aleat] == 0);
+
+
+            do {
+                for (int j = 0; j < nums2.length; j++) {
+                    if (nums2[j] == 0) {
+                        nums2[aleat2] = aleat2;
+                    } else {
+                        aleat2 = (int) (Math.random() * 8);
+                    }
+                }
+            } while (nums2[aleat]==0);
+
 
             System.out.print("*** Partido " + bombo1[aleat] + " - " + bombo2[aleat2] + " *** \n");
         }
-
     }
 }
