@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InvisibleArray {
@@ -9,13 +8,18 @@ public class InvisibleArray {
         int numPers;
         int aleat;
         int aleat2;
-        ArrayList<Integer> pers = new ArrayList<>();
+        int []pers;
 
         do {
             System.out.println("Cuantas personas van a participar?(tiene que ser par)");
             numPers = sc.nextInt();
         } while (numPers % 2 != 0);
         personas = new String[numPers];
+        pers = new int [numPers];
+
+        for (int i = 0; i < pers.length; i++) {
+            pers[i] = -1;
+        }
 
         for (int i = 0; i < personas.length; i++) {
             System.out.println("Introducir nombre del participante numero " + (i + 1));
@@ -23,25 +27,28 @@ public class InvisibleArray {
         }
 
         for (int i = 0; i < personas.length / 2; i++) {
+
             aleat = (int) (Math.random() * numPers);
+            do{
+                if (pers[aleat] == -1){
+                    pers[aleat] = aleat;
+                }else{
+                    do{
+                        aleat = (int) (Math.random() * numPers);
+                    }while (pers[aleat] != -1);
+                }
+            }while (pers[aleat] == -1);
+
             aleat2 = (int) (Math.random() * numPers);
-
             do{
-                if (pers.contains(aleat)){
-                    aleat = (int) (Math.random() * numPers);
+                if (pers[aleat2] == -1){
+                    pers[aleat2] = aleat2;
                 }else{
-                    pers.add(aleat);
+                    do{
+                        aleat2 = (int) (Math.random() * numPers);
+                    }while (pers[aleat2] != -1);
                 }
-            }while (!pers.contains(aleat) );
-
-
-            do{
-                if(pers.contains(aleat2)){
-                    aleat2 = (int) (Math.random() * numPers);
-                }else{
-                    pers.add(aleat2);
-                }
-            }while(!pers.contains(aleat2));
+            }while (pers[aleat2] == -1);
 
 
             System.out.println(personas[aleat] + " - " + personas[aleat2]);
