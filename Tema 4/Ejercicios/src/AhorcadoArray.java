@@ -10,40 +10,61 @@ public class AhorcadoArray {
         Scanner sc = new Scanner(System.in);
 
         String[] palabras = {"ordenador", "cesped", "casa", "teclado", "leche", "tinta", "mensajero", "hora", "publicidad", "congelador"};
-        int aleat = (int) (Math.random() * 11);
+        int aleat = (int) (Math.random() * 10);
         String letra;
         int vidas = 5;
-        String palabro = palabras[aleat - 1];
+        String palabro = palabras[aleat];
+        String[] palabrita = new String[palabro.length()];
         int sumar = 0;
-        int reps = 0;
-        System.out.println(palabro.charAt(1));
+        int fin = 0;
+        boolean salir = true;
         System.out.println(aleat);
 
-        for (int i = 0; i < palabras[aleat - 1].length(); i++) {
-            System.out.print("_ ");
+        for (int i = 0; i < palabrita.length; i++) {
+            palabrita[i] = "_  ";
+            System.out.print(palabrita[i]);
         }
 
         do {
-            System.out.println("\nPrueba con una letra");
-            letra = sc.next();
+            if (fin < palabrita.length || vidas > 0) {
+                System.out.println("\nPrueba con una letra");
+                letra = sc.next();
 
-            if (palabras[aleat - 1].contains(letra)) {
-                do {
-                    if (palabro.charAt(sumar) == letra.charAt(0)) {
-                        System.out.print(letra + " ");
+                if (palabro.contains(letra)) {
+                    do {
+                        if (palabro.charAt(sumar) == letra.charAt(0)) {
+                            palabrita[sumar] = letra;
+                            fin++;
+                        }
+                        sumar++;
+                    } while (sumar < palabro.length());
 
-                    } else {
-                        System.out.print("_ ");
+                    for (int i = 0; i < palabrita.length; i++) {
+                        System.out.print(palabrita[i] + " ");
                     }
-                    sumar++;
-                } while (sumar<palabro.length());
-                sumar = 0;
-            } else {
-                vidas--;
-                System.out.println("Una vida menos te quedan " + vidas);
-            }
+                    sumar = 0;
 
-            reps++;
-        } while (reps != palabro.length());
+                } else {
+                    vidas--;
+                    if (vidas == 0) {
+                        System.out.println("Te has quedado sin vidas");
+                    }
+                    if (vidas > 0) {
+                        System.out.println("Una vida menos, te quedan " + vidas);
+                        for (int i = 0; i < palabrita.length; i++) {
+                            System.out.print(palabrita[i] + " ");
+                        }
+                    }
+                }
+                if (fin == palabrita.length) {
+                    System.out.println("\nHAS GANADO");
+                    salir = false;
+                } else if (vidas == 0) {
+                    System.out.println("Has perdido. La palabra era " + palabro);
+                    salir = false;
+                }
+            }
+        } while (salir);
+
     }
 }
