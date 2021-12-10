@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 public class Colecciones {
 
@@ -86,12 +87,20 @@ public class Colecciones {
         System.out.println(listaCosas);*/
 
         System.out.println("El tamaño actual es de " + listaCosas.size());
-        for (int i = 0; i < listaCosas.size(); i++) {
-            if (listaCosas.get(i).equals(6)) {
-                listaCosas.remove(i);
+        /*for (int i = 0; i < listaCosas.size(); i++) {
+            if (listaCosas.get(i) instanceof Integer) {
+                //solo cuando sea numero se metera en el if
+                if ((int) listaCosas.get(i) == 6) {
+                    listaCosas.remove(i);
+                }
             }
-        }
-        System.out.println(listaCosas.get(3));
+        }*/
+        listaCosas.removeIf(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer o) {
+                return o.equals(6);
+            }
+        });
         System.out.println("El tamaño actual es de " + listaCosas.size());
         System.out.println(listaCosas);
     }

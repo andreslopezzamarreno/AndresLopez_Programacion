@@ -29,6 +29,8 @@ public class InvisibleArray {
         for (int i = 0; i < personas.length / 2; i++) {
 
             aleat = (int) (Math.random() * numPers);
+            aleat2 = (int) (Math.random() * numPers);
+
             do{
                 if (pers[aleat] == -1){
                     pers[aleat] = aleat;
@@ -39,7 +41,6 @@ public class InvisibleArray {
                 }
             }while (pers[aleat] == -1);
 
-            aleat2 = (int) (Math.random() * numPers);
             do{
                 if (pers[aleat2] == -1){
                     pers[aleat2] = aleat2;

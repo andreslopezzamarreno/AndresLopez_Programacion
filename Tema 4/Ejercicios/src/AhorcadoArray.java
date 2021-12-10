@@ -1,8 +1,3 @@
-
-
-//  sin terminar
-
-
 import java.util.Scanner;
 
 public class AhorcadoArray {
