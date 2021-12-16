@@ -10,6 +10,7 @@ public class Agenda {
         String busqueda;
         int opcion;
         boolean encontrado;
+        boolean añadido = false;
 
         do {
             System.out.println("1. Agregar persona\n2. buscar persona (por DNi)\n3. Borrar persona (por DNI) \n4. Listar perssona\n5. Salir ");
@@ -18,15 +19,27 @@ public class Agenda {
                 case 1:
                     persona = new Object[4];
                     System.out.println("Nombre");
-                    persona[0] = sc.next();
+                    String nombre = sc.next();
                     System.out.println("Apellido");
-                    persona[1] = sc.next();
+                    String apellido = sc.next();
                     System.out.println("Telefono");
-                    persona[2] = sc.next();
+                    int telefono = sc.nextInt();
                     System.out.println("DNI");
-                    persona[3] = sc.next();
+                    String dni = sc.next();
+                    persona = new Object[]{nombre,apellido,telefono,dni};
+                    for ( Object[] item: agenda) {
+                        if (item[3].toString().equalsIgnoreCase(dni)){
+                            añadido = true;
+                            break;
+                        }
+                    }
 
-                    agenda.add(persona);
+                    if(!añadido){
+                        agenda.add(persona);
+                        System.out.println("persona añadida");
+                    }else{
+                        System.out.println("Persona ya añadida");
+                    }
                     break;
 
                 case 2:
@@ -82,7 +95,7 @@ public class Agenda {
                         System.out.println("No hay personas registradas");
                     }
                     break;
-                    
+
                 case 5:
                     System.out.println("Salir");
                     break;
