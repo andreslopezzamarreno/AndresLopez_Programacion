@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Agenda {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         ArrayList<Object[]> agenda = new ArrayList<>();
         Object[] persona;
         String busqueda;
