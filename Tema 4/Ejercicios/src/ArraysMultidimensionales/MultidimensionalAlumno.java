@@ -1,3 +1,5 @@
+package ArraysMultidimensionales;
+
 public class MultidimensionalAlumno {
     public static void main(String[] args) {
         Object [][] alumnos= new Object[3][5];

@@ -1,4 +1,4 @@
-
+package ArraysMultidimensionales;
 
 /* duda que surgió en clase de porque para recorrer el array multidimensional el segundo for alidado
 tenia que ser de la forma numeros[i].length y no numeros.length*/

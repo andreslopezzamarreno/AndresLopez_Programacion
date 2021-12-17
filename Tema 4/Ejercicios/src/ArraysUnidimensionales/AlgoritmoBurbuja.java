@@ -1,3 +1,5 @@
+package ArraysUnidimensionales;
+
 import java.util.Scanner;
 
 public class AlgoritmoBurbuja {

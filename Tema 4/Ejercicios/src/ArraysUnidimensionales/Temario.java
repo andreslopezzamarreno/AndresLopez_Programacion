@@ -1,3 +1,5 @@
+package ArraysUnidimensionales;
+
 public class Temario {
     public static void main(String[] args) {
         String [] temario = {" Introducción"," Identificadores"," Estructuras"," Colecciones",

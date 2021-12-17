@@ -1,3 +1,5 @@
+package ArraysMultidimensionales;
+
 import java.util.Scanner;
 
 public class MultidimensionalAutomatico {
