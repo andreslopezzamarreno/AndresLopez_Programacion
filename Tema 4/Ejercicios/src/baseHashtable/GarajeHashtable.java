@@ -68,6 +68,7 @@ public class GarajeHashtable {
 
                         suma += (int)elemento[2];
                     }
+
                     System.out.println(suma);
 
                     break;
@@ -87,6 +88,7 @@ public class GarajeHashtable {
                         garaje.remove(matri);
                     }
                     break;
+
                 case 7:
                     System.out.println("Salir");
                     break;
