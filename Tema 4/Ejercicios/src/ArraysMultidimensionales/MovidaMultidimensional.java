@@ -15,8 +15,7 @@ public class MovidaMultidimensional {
 
             /*se pone numero[i].length por que en el caso de que el array no fuese un array cuadrado
             la longitud de las columnas solo llegaria hasta la longitud de las filas y se quedarias valores
-            nulos o no podrias meter valores en las posiciones
-            */
+            nulos o no podrias meter valores en las posiciones*/
 
             for (int j = 0; j < numeros[i].length; j++) {
                 System.out.println("introduce valor de la posicion " );
@@ -28,6 +27,10 @@ public class MovidaMultidimensional {
                 System.out.print(numeros[i][j]);
             }
             System.out.println();
+        }
+        // sacar todo el abecedario
+        for (char x = 'a'; x<= 'z'; x++) {
+            System.out.print(x + ",  ");
         }
     }
 }
