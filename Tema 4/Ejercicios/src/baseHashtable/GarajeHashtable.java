@@ -31,61 +31,80 @@ public class GarajeHashtable {
                     String matricula = sc.next();
 
                     garaje.put(matricula, new Object[]{marca, modelo, coste, matricula});
-
                     break;
 
                 case 2:
+                    if(!garaje.isEmpty()) {
+                        Enumeration<String> matriculas = garaje.keys();
 
-                    Enumeration<String> matriculas = garaje.keys();
+                        while (matriculas.hasMoreElements()) {
+                            String matriculaAct = matriculas.nextElement();
+                            Object[] cocheAct = garaje.get(matriculaAct);
 
-                    while (matriculas.hasMoreElements()) {
-                        String matriculaAct = matriculas.nextElement();
-                        Object[] cocheAct = garaje.get(matriculaAct);
+                            for (Object item : cocheAct) {
+                                System.out.println(item);
+                            }
+                            System.out.println();
+                        }
+                    }else {
+                        System.out.println("Garaje vacio");
+                    }
+
+                    break;
+
+                case 3:
+                    if(!garaje.isEmpty()){
+                        System.out.println("Buscar coche");
+                        busqueda = sc.next();
+
+                        Object[] cocheAct = garaje.get(busqueda);
 
                         for (Object item : cocheAct) {
                             System.out.println(item);
                         }
-                        System.out.println();
-                    }
-                    break;
-
-                case 3:
-                    System.out.println("Buscar coche");
-                    busqueda = sc.next();
-
-                    Object[] cocheAct = garaje.get(busqueda);
-
-                    for (Object item:cocheAct) {
-                        System.out.println(item);
+                    }else{
+                        System.out.println("Garaje vacio");
                     }
                     break;
 
                 case 4:
-                    Enumeration<Object[]> costesTot = garaje.elements();
+                    if(!garaje.isEmpty()){
+                        Enumeration<Object[]> costesTot = garaje.elements();
 
-                    while(costesTot.hasMoreElements()){
-                        Object[] elemento = costesTot.nextElement();
+                        while (costesTot.hasMoreElements()) {
+                            Object[] elemento = costesTot.nextElement();
 
-                        suma += (int)elemento[2];
+                            suma += (int) elemento[2];
+                        }
+
+                        System.out.println(suma);
+                    }else{
+                        System.out.println("Garaje vacio");
                     }
-
-                    System.out.println(suma);
-
                     break;
-                case 5:
-                    System.out.println("Que coche quieres eliminar");
-                    borrar = sc.next();
 
-                    garaje.remove(borrar);
+                case 5:
+                    if(!garaje.isEmpty()){
+                        System.out.println("Que coche quieres eliminar");
+                        borrar = sc.next();
+
+                        garaje.remove(borrar);
+                    }else{
+                        System.out.println("Garaje vacio");
+                    }
                     break;
 
                 case 6:
-                    Enumeration<String> cocheTemp = garaje.keys();
+                    if(!garaje.isEmpty()){
+                        Enumeration<String> cocheTemp = garaje.keys();
 
-                    while(cocheTemp.hasMoreElements()){
-                        String matri = cocheTemp.nextElement();
+                        while (cocheTemp.hasMoreElements()) {
+                            String matri = cocheTemp.nextElement();
 
-                        garaje.remove(matri);
+                            garaje.remove(matri);
+                        }
+                    }else{
+                        System.out.println("Garaje vacio ");
                     }
                     break;
 
@@ -97,6 +116,6 @@ public class GarajeHashtable {
                     System.out.println("Opcion no valida");
 
             }
-        } while (opcion != 7) ;
+        } while (opcion != 7);
     }
 }
