@@ -25,6 +25,6 @@ public class Entrada {
 
         System.out.println(usuario1.getPassword());
         usuario1.setPassword("contraseña2");
-        
+
     }
 }
