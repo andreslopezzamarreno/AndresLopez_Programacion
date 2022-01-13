@@ -23,8 +23,18 @@ public class Entrada {
         //correoElectronico=por defecto , nombre=por defecto, apellidos=null, password=contraseña, fecha=null, edad=0
         System.out.println(usuario1.password);*/
 
-        System.out.println(usuario1.getPassword());
+        //System.out.println(usuario1.getPassword());
         usuario1.setPassword("contraseña2");
 
+        //usuario1.mostrarDatos();
+
+        //no se puede a no ser que el metodo mostrarDatos retorne algo y no sea void
+        //System.out.println(usuario1.mostrarDatos());
+
+        System.out.println(usuario1.mostrarDatosRetorno());
+
+        usuario1.saludar("juan alberto hernandez");
+
+        usuario1.saludar(usuario3);
     }
 }

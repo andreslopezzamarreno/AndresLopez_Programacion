@@ -11,7 +11,7 @@ public class Usuarios {
     public Usuarios(){
         this.nombre = "Por defecto";
         this.correoElectronico = "Por defecto";
-
+        edad = 18;
     }
 
     public Usuarios(String correoElectronico,String nombre,String password){
@@ -27,6 +27,28 @@ public class Usuarios {
     }
 
     //metodos
+
+    public void mostrarDatos (){
+        System.out.println("Nommbre " + nombre);
+        System.out.println("Contraseña " + password);
+        System.out.println("Correo " + correoElectronico);
+        System.out.println("Fecha " + fecha);
+        System.out.println("Edad " + edad);
+    }
+
+    public String mostrarDatosRetorno(){
+        nombre = "otra cosa ";
+        //aqui puede haber todas las ejecuciones que me apetezca
+        return "Nombre " + nombre + "\n" + "Apellido " + apellidos;
+    }
+
+    public void saludar (String nombreSaludar){
+        System.out.println("hola " + nombreSaludar + " que tal estas");
+    }
+
+    public void saludar(Usuarios usuario){
+        System.out.println("hola " + usuario.getNombre() + " que tal estas");
+    }
 
     //metodos especiales (getters y setters)
     //getter de pass
