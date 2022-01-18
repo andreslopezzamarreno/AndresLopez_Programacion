@@ -6,6 +6,7 @@ public class Coche {
     private String modelo;
     private double costeAverias;
 
+    //constructor
     public Coche (String marca, String modelo){
         this.marca = marca;
         this.modelo = modelo;
@@ -16,6 +17,8 @@ public class Coche {
         this.marca = marca;
         this.modelo = modelo;
     }
+
+    //metodos
     public void acumularAveria(double costeAverias){
         this.costeAverias += costeAverias;
     }
