@@ -9,6 +9,7 @@ public class Persona {
     private int edad;
     private double peso;
     private int altura;
+    private int incEdad;
 
     //constructores
     public Persona(String nombre, String apellido, String dni, int edad, double peso, int altura){
@@ -40,6 +41,15 @@ public class Persona {
     //metodos
     public void mostrarDatos (){
         System.out.printf("Nombre: %s%nApellido: %s%nEdad: %d",nombre, apellido, edad);
+    }
+
+    public void incrementEdad(int incEdad){
+        this.edad += incEdad;
+    }
+
+    public double imc (){
+        double imc = (this.peso/ Math.pow (this.altura,2)*10000);
+        return imc;
     }
 
     //getter y setter
