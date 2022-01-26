@@ -10,6 +10,7 @@ public class Agenda {
     public Agenda(){
     }
 
+
     //getter y setter
     public Hashtable<String, Persona> getAgenda() {
         return agenda;

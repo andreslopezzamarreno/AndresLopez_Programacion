@@ -1,5 +1,6 @@
 package agenda;
 
+import java.util.Enumeration;
 import java.util.Scanner;
 
 public class Entrada {
@@ -19,14 +20,8 @@ public class Entrada {
                 case 1:
                     System.out.println("Añadir persona\nNombre:");
                     nombre = sc.next();
-                    do{
-                        System.out.println("Telefono");
-                        telefono = sc.nextInt();
-                        if (telefono<=600000000 || telefono>=699999999){
-                            System.out.println("Introduzca telefono correcto");
-                        }
-                    }while (telefono>=600000000 && telefono<=699999999);
-
+                    System.out.println("Telefono");
+                    telefono = sc.nextInt();
                     System.out.println("DNI");
                     dni = sc.next();
                     Persona persona = new Persona(nombre,telefono,dni);
@@ -36,17 +31,43 @@ public class Entrada {
 
                 case 2:
                     if(!agenda.getAgenda().isEmpty()){
-
+                        System.out.println("Eliminar persona (por DNI)");
+                        busqueda = sc.next();
+                            if (agenda.getAgenda().containsKey(busqueda)){
+                                agenda.getAgenda().remove(busqueda);
+                                System.out.println("Persona borrada\n");
+                            }else{
+                                System.out.println("DNI no encontrado\n");
+                            }
                     }else{
-                        System.out.println("Agenda vacia");
+                        System.out.println("Agenda vacia\n");
                     }
                     break;
 
                 case 3:
                     if(!agenda.getAgenda().isEmpty()){
-
+                        System.out.println("Editar persona (por DNI)");
+                        busqueda = sc.next();
+                        if (agenda.getAgenda().containsKey(busqueda)){
+                            System.out.println("Que quieres editar?\n1.Nombre\n2.telefono");
+                            opcion = sc.nextInt();
+                            switch (opcion){
+                                case 1:
+                                    System.out.println("Nuevo Nombre");
+                                    nombre = sc.next();
+                                    agenda.getAgenda().get(busqueda).setNombre(nombre);
+                                    break;
+                                case 2:
+                                    System.out.println("Nuevo telefono");
+                                    telefono = sc.nextInt();
+                                    agenda.getAgenda().get(busqueda).setTelefono(telefono);
+                                    break;
+                            }
+                        }else{
+                            System.out.println("DNI no encontrado\n");
+                        }
                     }else{
-                        System.out.println("Agenda vacia");
+                        System.out.println("Agenda vacia\n");
                     }
                     break;
 
@@ -62,11 +83,22 @@ public class Entrada {
                         System.out.println(personaBusca.getDni()+ "\n");
 
                     }else{
-                        System.out.println("Agenda vacia");
+                        System.out.println("Agenda vacia\n");
                     }
 
                     break;
                 case 5:
+                    if (!agenda.getAgenda().isEmpty()) {
+                        Enumeration<String> claves = agenda.getAgenda().keys();
+
+                        while (claves.hasMoreElements()) {
+                            String dniAct = claves.nextElement();
+                            Persona persona1 = agenda.getAgenda().get(dniAct);
+                            System.out.println("Nombre: " + persona1.getNombre() + "\nTelefono:" + persona1.getTelefono() + "DNI: " + persona1.getDni() + "\n");
+                        }
+                    }else{
+                        System.out.println("Agenda vacia\n");
+                    }
                     break;
                 case 6:
                     System.out.println("Salir");
