@@ -15,15 +15,13 @@ public class Cuadrado {
         this.altura = altura;
     }
 
-    public int area(){
+    public void area(){
         int area = base * altura;
         this.area = area;
-        return area;
     }
-    public int perimetro(){
+    public void perimetro(){
         int perimetro = 2*base + 2* altura;
         this.perimetro = perimetro;
-        return perimetro;
     }
 
     public int getBase() {

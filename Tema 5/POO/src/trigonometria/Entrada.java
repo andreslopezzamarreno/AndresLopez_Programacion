@@ -31,18 +31,22 @@ public class Entrada {
                     altura = sc.nextInt();
 
                     Triangulo triangulo = new Triangulo(base, altura);
-                    System.out.println("Que quieres hacer\n1.Calcular Area\n2.Mostrar datos");
-                    opcion = sc.nextInt();
-                    switch (opcion) {
-                        case 1:
-                            triangulo.areaTriangulo();
-                            System.out.println("El area del triangulo es: " + triangulo.getArea());
-                            break;
-                        case 2:
-                            triangulo.areaTriangulo();
-                            System.out.println("Base: " + base + "\nAltura: " + altura );
-                            break;
-                    }
+                    do {
+                        System.out.println("Que quieres hacer\n1.Calcular Area\n2.Mostrar datos\n0.Salir");
+                        opcion = sc.nextInt();
+                        switch (opcion) {
+                            case 1:
+                                triangulo.areaTriangulo();
+
+                                break;
+                            case 2:
+                                triangulo.areaTriangulo();
+                                System.out.println("Base: " + base + "\nAltura: " + altura + "\nBase : "+ base);
+                                break;
+                        }
+                    }while (opcion != 0);
+                    System.out.println("Pulsa enter para continuar");
+                    sc.nextLine();
                     break;
 
                 case 2:
@@ -53,15 +57,18 @@ public class Entrada {
                     Circulo circulo = new Circulo(radio);
                     switch (opcion){
                         case 1:
-                            System.out.println("El area del circulo es: " + circulo.areaCirculo());
+                            circulo.areaCirculo();
+                            System.out.println("El area del circulo es: " + circulo.getArea());
                             break;
                         case 2:
-                            System.out.println("El diametro del circulo es: " + circulo.perimetroCirculo());
+                            circulo.diametroCirculo();
+                            System.out.println("El diametro del circulo es: " + circulo.getDiametro());
                             break;
                         case 3:
                             System.out.println("El radio es: " + circulo.getRadio());
                             break;
                     }
+
                     break;
                 case 3:
                     System.out.println("Introduce la base: ");
@@ -73,10 +80,12 @@ public class Entrada {
                     Cuadrado cuadrado = new Cuadrado(base, altura);
                     switch (opcion){
                         case 1:
-                            System.out.println("El area del cuadrado es: " + cuadrado.area());
+                            cuadrado.area();
+                            System.out.println("El area del cuadrado es: " + cuadrado.getArea());
                             break;
                         case 2:
-                            System.out.println("El perimetro del circulo es: " + cuadrado.perimetro());
+                            cuadrado.perimetro();
+                            System.out.println("El perimetro del circulo es: " + cuadrado.getPerimetro());
                             break;
                         case 3:
                             System.out.println("La base es: " + cuadrado.getBase());

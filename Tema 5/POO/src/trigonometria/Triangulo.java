@@ -16,10 +16,9 @@ public class Triangulo {
     }
 
     //metodos
-    public double areaTriangulo(){
+    public void areaTriangulo(){
         double area = (double )(base *altura)/2;
         this.area = area;
-        return area;
     }
 
     public int getBase() {

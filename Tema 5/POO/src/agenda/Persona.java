@@ -8,7 +8,6 @@ public class Persona {
     private String nombre;
     private int telefono;
     private String dni;
-    private Hashtable<String, Object[]> agenda = new Hashtable<>();
 
     //contructor
     public Persona (String nombre, int telefono, String dni){
