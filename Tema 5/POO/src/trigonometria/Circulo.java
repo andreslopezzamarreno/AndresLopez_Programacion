@@ -13,9 +13,10 @@ public class Circulo {
         this.radio = radio;
     }
 
-    public void areaCirculo (){
+    public double areaCirculo (){
         double area = Math.PI*(Math.pow(radio,2));
         this.area = area;
+        return area;
     }
 
     public void diametroCirculo(){

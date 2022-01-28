@@ -57,8 +57,7 @@ public class Entrada {
                     Circulo circulo = new Circulo(radio);
                     switch (opcion){
                         case 1:
-                            circulo.areaCirculo();
-                            System.out.println("El area del circulo es: " + circulo.getArea());
+                            System.out.println("El area del circulo es: " + circulo.areaCirculo());
                             break;
                         case 2:
                             circulo.diametroCirculo();
