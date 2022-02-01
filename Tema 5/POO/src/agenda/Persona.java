@@ -1,7 +1,5 @@
 package agenda;
 
-import java.util.Hashtable;
-
 public class Persona {
 
     //variables

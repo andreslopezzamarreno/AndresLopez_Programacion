@@ -25,7 +25,6 @@ public class Entrada2 {
                     dni = sc.next();
                     Persona persona = new Persona(nombre, telefono, dni);
                     agenda2.agregar2(persona);
-                    System.out.println("Persona añadida\n");
                     break;
 
                 case 2:
