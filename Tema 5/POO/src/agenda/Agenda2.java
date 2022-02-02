@@ -11,6 +11,7 @@ public class Agenda2 {
     private int opcion;
     private boolean repetida;
 
+
     //contructor
     public Agenda2() {
         this.agenda2 = new ArrayList<>();

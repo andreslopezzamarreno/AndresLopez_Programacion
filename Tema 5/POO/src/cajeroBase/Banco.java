@@ -8,9 +8,13 @@ public class Banco {
     private ArrayList<Cuenta> cuentas;
 
     //contructor
-    public Banco(){}
+    public Banco(String nombre, String cif){
+        this.nombre= nombre;
+        this.cif= cif;
+        this.cuentas= new ArrayList<>();
+    }
     //metodos
-    public void abrirCuenta(){
+    public void abrirCuenta(String dni){
 
     }
     public void cancelarCuenta(){
