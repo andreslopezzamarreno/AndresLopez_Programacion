@@ -7,7 +7,7 @@ public class Cuenta {
     private Cliente cliente1;
 
     public Cuenta(Cliente cliente, double saldo, int pin) {
-        cliente1 = cliente;
+        this.cliente1 = cliente;
         this.saldo = saldo;
         this.pin = pin;
     }
@@ -53,7 +53,7 @@ public class Cuenta {
         return cliente1;
     }
 
-    public void setCliente1(Cliente cliente1) {
-        cliente1 = cliente1;
+    public void setCliente1(Cliente cliente) {
+        this.cliente1 = cliente;
     }
 }

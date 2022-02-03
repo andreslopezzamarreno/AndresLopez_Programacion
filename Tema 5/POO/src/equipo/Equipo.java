@@ -30,7 +30,6 @@ public class Equipo {
 
     //metodos
     public boolean atacar(){
-        boolean gol;
         double attack =nivelAtaque*(Math.random())+nivelCentro +(Math.random())/2;
         if(attack>90){
             return true;

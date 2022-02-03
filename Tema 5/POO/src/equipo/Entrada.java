@@ -33,11 +33,5 @@ public class Entrada {
 
         partido.iniciarPartido();
         partido.mostrarResultado();
-
-
-
     }
-
-
-
 }
