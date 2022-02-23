@@ -9,11 +9,11 @@ public final class Asalariado extends Trabajador{
     //constructores
     public Asalariado() {}
 
-    public Asalariado(String nombre, String dni, String apellido, int sueldo, int numPagas, boolean contrato) {
+    public Asalariado(String nombre, String dni, String apellido, int sueldo, int numPagas) {
         super(nombre, dni, apellido);
         this.sueldo = sueldo;
         this.numPagas = numPagas;
-        this.contrato = contrato;
+        this.contrato = false;
     }
 
     //metodos

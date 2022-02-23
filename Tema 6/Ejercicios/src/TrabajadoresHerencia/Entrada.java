@@ -20,26 +20,14 @@ public class Entrada {
         Empresa empresa = new Empresa(juan);
 
         do {
-            System.out.println("Que quieres hacer: \n1.Registrar trabajdor \n2.Añadir trabajador a una empresa \n" +
-                    "3.listar trabajadores \n4.mostrar datos de trabajador");
+            System.out.println("Que quieres hacer: \n1.Registrar trabajdor\n" +
+                    "2.listar trabajadores \n3.mostrar datos de trabajador");
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    System.out.println("Que tipo de trabajador quieres registrar");
+                    System.out.println("Que tipo de trabajador quieres registrar: asalariado o autonomo");
                     tipo = sc.next();
-                    if (tipo.equalsIgnoreCase("jefe")){
-                        System.out.println("nombre");
-                        nombre = sc.next();
-                        System.out.println("apellido");
-                        apellido = sc.next();
-                        System.out.println("dni");
-                        dni = sc.next();
-                        System.out.println("acciones");
-                        acciones = sc.nextInt();
-                        System.out.println("beneficio");
-                        beneficio = sc.nextInt();
-                        Jefe jefe = new Jefe(nombre, dni, apellido, acciones,beneficio);
-                    }else if(tipo.equalsIgnoreCase("asalariado")){
+                    if(tipo.equalsIgnoreCase("asalariado")){
                         System.out.println("nombre");
                         nombre = sc.next();
                         System.out.println("apellido");
@@ -50,7 +38,8 @@ public class Entrada {
                         sueldo = sc.nextInt();
                         System.out.println("numero de pagas");
                         numPagas = sc.nextInt();
-                        
+                        Asalariado asalariado = new Asalariado(nombre,dni,apellido, sueldo, numPagas);
+                        empresa.agrgarTrabajador(asalariado);
                     }else if(tipo.equalsIgnoreCase("autonomo")){
                         System.out.println("nombre");
                         nombre = sc.next();
@@ -60,13 +49,20 @@ public class Entrada {
                         dni = sc.next();
                         System.out.println("sueldo");
                         sueldo = sc.nextInt();
+                        Autonomo autonomo = new Autonomo(nombre, dni, apellido,sueldo);
+                        empresa.agrgarTrabajador(autonomo);
                     }
                     break;
+
                 case 2:
+                    System.out.println("que trabajadores quieres ver, asalariados, autonomos o todos");
+                    tipo = sc.next();
+                    empresa.listarTrabajadores(tipo);
                     break;
                 case 3:
-                    break;
-                case 4:
+                    System.out.println("que trabajador quieres buscar");
+                    tipo = sc.next();
+                    empresa.mostrarTrabajador(tipo);
                     break;
             }
         }while(true);
