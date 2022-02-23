@@ -21,10 +21,27 @@ public final class Jefe extends Trabajador{
         System.out.print("    acciones: " + acciones + "    beneficio: " + beneficio);
     }
 
-    public void despedir(){
+    public void despedir(Trabajador trabajador){
+        if(trabajador instanceof Asalariado || trabajador instanceof Autonomo){
 
+        }
     }
 
 
     //getter y setter
+    public int getAcciones() {
+        return acciones;
+    }
+
+    public void setAcciones(int acciones) {
+        this.acciones = acciones;
+    }
+
+    public int getBeneficio() {
+        return beneficio;
+    }
+
+    public void setBeneficio(int beneficio) {
+        this.beneficio = beneficio;
+    }
 }

@@ -16,9 +16,20 @@ public class Empresa {
 
     //metodos
     public void listarTrabajadores(String tipo){
-        if (tipo.equalsIgnoreCase("asalariado")){
-
+        for (Trabajador item:listaTrabajadores) {
+            if (tipo.equalsIgnoreCase("asalariado")){
+                if (item instanceof Asalariado){
+                    item.mostrardatos();
+                }
+            }
+            if(tipo.equalsIgnoreCase("autonomo")){
+                if (item instanceof Autonomo){
+                    item.mostrardatos();
+                }
+            }
         }
+
+
     }
 
     public void agrgarTrabajador (Trabajador trabajador){
@@ -41,6 +52,21 @@ public class Empresa {
             }
         }
     }
-    //getter y setter
 
+    //getter y setter
+    public ArrayList<Trabajador> getListaTrabajadores() {
+        return listaTrabajadores;
+    }
+
+    public void setListaTrabajadores(ArrayList<Trabajador> listaTrabajadores) {
+        this.listaTrabajadores = listaTrabajadores;
+    }
+
+    public Jefe getJefe() {
+        return jefe;
+    }
+
+    public void setJefe(Jefe jefe) {
+        this.jefe = jefe;
+    }
 }

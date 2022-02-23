@@ -22,5 +22,19 @@ public final class Autonomo extends Trabajador{
     }
 
     //getter y setter
+    public int getSueldo() {
+        return sueldo;
+    }
 
+    public void setSueldo(int sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public boolean isContrato() {
+        return contrato;
+    }
+
+    public void setContrato(boolean contrato) {
+        this.contrato = contrato;
+    }
 }
