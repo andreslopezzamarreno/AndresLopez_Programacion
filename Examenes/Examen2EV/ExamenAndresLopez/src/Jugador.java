@@ -6,15 +6,22 @@ public final class Jugador extends Persona{
     public Jugador() {
     }
 
-    public Jugador(String nombre, String apellido, String dni, int edad, int sueldo, String posicion, int sueldo1) {
+    public Jugador(String nombre, String apellido, String dni, int edad, double sueldo, String posicion) {
         super(nombre, apellido, dni, edad, sueldo);
         this.posicion = posicion;
+        calcularSueldo();
     }
 
     //metodos
     @Override
     public void calcularSueldo() {
         sueldo += (sueldo*0.5);
+    }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("posicion: " + posicion);
     }
 
     //getter y setter

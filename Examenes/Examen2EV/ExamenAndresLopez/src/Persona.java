@@ -7,7 +7,7 @@ public abstract class Persona {
     //constructores
     public Persona(){}
 
-    public Persona(String nombre, String apellido, String dni, int edad, int sueldo){
+    public Persona(String nombre, String apellido, String dni, int edad, double sueldo){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -17,6 +17,10 @@ public abstract class Persona {
 
     //metodos
     public abstract void calcularSueldo();
+
+    public  void mostrarDatos(){
+        System.out.println("nombre: " + nombre +"\napellido: " + apellido + "\ndni: " + dni + "\nedad: " + edad + "\nsueldo: " + sueldo);
+    }
 
     //getter y setter
     public String getNombre() {
