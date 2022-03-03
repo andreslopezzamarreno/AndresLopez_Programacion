@@ -1,25 +1,27 @@
 public abstract class Persona {
     //variables
-    protected String nombre, apellido,dni;
+    protected String nombre, apellido, dni;
     protected int edad;
     protected double sueldo;
 
     //constructores
-    public Persona(){}
+    public Persona() {
+    }
 
-    public Persona(String nombre, String apellido, String dni, int edad, double sueldo){
+    public Persona(String nombre, String apellido, String dni, int edad, double sueldo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.edad = edad;
         this.sueldo = sueldo;
+        calcularSueldo();
     }
 
     //metodos
     public abstract void calcularSueldo();
 
-    public  void mostrarDatos(){
-        System.out.println("nombre: " + nombre +"\napellido: " + apellido + "\ndni: " + dni + "\nedad: " + edad + "\nsueldo: " + sueldo);
+    public void mostrarDatos() {
+        System.out.println("nombre: " + nombre + "\napellido: " + apellido + "\ndni: " + dni + "\nedad: " + edad + "\nsueldo: " + sueldo);
     }
 
     //getter y setter

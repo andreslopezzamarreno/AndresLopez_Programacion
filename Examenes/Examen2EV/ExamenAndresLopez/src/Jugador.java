@@ -1,4 +1,4 @@
-public final class Jugador extends Persona{
+public final class Jugador extends Persona {
     //variables
     private String posicion;
 
@@ -9,13 +9,12 @@ public final class Jugador extends Persona{
     public Jugador(String nombre, String apellido, String dni, int edad, double sueldo, String posicion) {
         super(nombre, apellido, dni, edad, sueldo);
         this.posicion = posicion;
-        calcularSueldo();
     }
 
     //metodos
     @Override
     public void calcularSueldo() {
-        sueldo += (sueldo*0.5);
+        sueldo += (sueldo * 0.5);
     }
 
     @Override
