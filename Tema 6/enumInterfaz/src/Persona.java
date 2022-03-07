@@ -11,6 +11,12 @@ public abstract class Persona {
 
     public abstract void calcularSueldo();
 
+    public void mostrarDatos(){
+        System.out.println(nombre);
+        System.out.println(apellido);
+        System.out.println(sueldo);
+    }
+
     public String getNombre() {
         return nombre;
     }
