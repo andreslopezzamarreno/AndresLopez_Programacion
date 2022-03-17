@@ -1,22 +1,25 @@
 public abstract class Persona {
 
-    //variables
     protected String nombre,apellido,dni;
 
     //constructores
-    public Persona(){}
-
-    public Persona(String nombre, String apellido, String dni) {
+    public Persona (String nombre, String apellido, String dni){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
     }
 
+    public Persona(){}
+
+    //metodos
     public void mostrarDatos(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellido: " + apellido);
         System.out.println("DNI: " + dni);
+
     }
+
+    //getter y setter
 
     public String getNombre() {
         return nombre;
