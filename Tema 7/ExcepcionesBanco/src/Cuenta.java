@@ -23,7 +23,7 @@ public class Cuenta {
     }
 
     public boolean sacarTodo(){
-        System.out.println("Quieres sacar los " + saldo + " que te quedan\n1.SI   0.NO");
+        System.out.println("Quieres sacar los " + saldo + "€ que te quedan\n1.SI   0.NO");
         sacar = sc.nextInt();
         switch (sacar) {
             case 1:
