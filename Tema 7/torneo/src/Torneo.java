@@ -19,20 +19,20 @@ public class Torneo {
 
     //metodos
     public void realizarSorteo() {
+        //ida
         for (int i = 0; i < equipos.size() - 1; i++) {
             for (int j = i + 1; j < equipos.size(); j++) {
                 Partido partido = new Partido(equipos.get(i), equipos.get(j));
                 partidos.add(partido);
             }
         }
-
+        //vuelta
         for (int i = equipos.size() - 1; i >= 0; i--) {
             for (int j = i - 1; j >= 0; j--) {
                 Partido partido = new Partido(equipos.get(i), equipos.get(j));
                 partidos.add(partido);
             }
         }
-
         Collections.shuffle(partidos);
     }
 
@@ -49,25 +49,20 @@ public class Torneo {
         }
     }
 
-    public void verPuntos() {
-        for (Equipo item : equipos) {
-            System.out.println(item.nombre + ": " + item.puntos);
-        }
-    }
-
     public void clasificar() {
         Collections.sort(equipos, new Comparator<Equipo>() {
             @Override
             public int compare(Equipo o1, Equipo o2) {
-                if(o1.getPuntos()>o2.getPuntos()){
+                if (o1.getPuntos() > o2.getPuntos()) {
                     return -1;
                 }
                 return 0;
             }
         });
-        verPuntos();
+        for (int i = 0; i < equipos.size(); i++) {
+            System.out.println((i+1) + "º - "+ equipos.get(i).nombre + ": " + equipos.get(i).puntos);
+        }
     }
-
 
     //getter y setter
     public ArrayList<Partido> getPartidos() {
@@ -94,8 +89,8 @@ public class Torneo {
         this.equipos = equipos;
     }
 
-    class Partido {
 
+    class Partido {
         //variables
         private Equipo equipoLocal, equipoVisitante;
         private int golesLocal, golesVisitante;
@@ -123,8 +118,10 @@ public class Torneo {
 
         public void jugar() {
             for (int i = 0; i < 2; i++) {
-                agregarGolLocal();
-                agregarGolVisitante();
+                for (int j = 0; j < 3; j++) {
+                    agregarGolLocal();
+                    agregarGolVisitante();
+                }
             }
             repartirPuntos();
             //System.out.println(equipoLocal.nombre + ": " + golesLocal + " -  " + equipoVisitante.nombre + ": " + golesVisitante);
@@ -186,6 +183,7 @@ public class Torneo {
             this.jugado = jugado;
         }
     }
+
 
     static class Equipo {
 
