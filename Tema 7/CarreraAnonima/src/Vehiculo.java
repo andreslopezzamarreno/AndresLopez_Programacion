@@ -2,11 +2,12 @@ public abstract class Vehiculo {
 
     //variables
     protected String tipo;
-    protected int numRuedas, cc,cv;
+    protected int numRuedas, cc,cv,id;
     protected double peso;
 
     //constructores
-    public Vehiculo(String tipo, int numRuedas, int cc,int cv,double peso) {
+    public Vehiculo(int id,String tipo, int numRuedas, int cc,int cv,double peso) {
+        this.id = id;
         this.tipo = tipo;
         this.numRuedas = numRuedas;
         this.cc = cc;
@@ -14,13 +15,11 @@ public abstract class Vehiculo {
         this.peso = peso;
     }
 
-    public Vehiculo() {
-    }
-
     //metodos
-    public abstract void reprogramarMotor();
+    public abstract void reprogramarMotor(int opcion);
 
     public void mostrarDatos(){
+        System.out.println("ID: " + id);
         System.out.println("Tipo: " + tipo);
         System.out.println("Numero de ruedas: " + numRuedas);
         System.out.println("CC: " + cc);
