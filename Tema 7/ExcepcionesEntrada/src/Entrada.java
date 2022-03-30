@@ -11,6 +11,7 @@ public class Entrada {
         int intentos = 0;
 
         System.out.println("Adivina el numero secreto (1-20)");
+        numeroIntroducido = sc.nextInt();
         do{
             try{
                 sc = new Scanner(System.in);

@@ -12,6 +12,7 @@ public class Entrada {
         int opcion,cantidad;
         ArrayList<String> errores = new ArrayList<>();
         Cuenta cuenta = new Cuenta(1,1234);
+        boolean inicio = false;
 
         do{
             System.out.println("Que quieres hacer: \n1.Ingresar Dinero\n2.Sacar Dinero\n3.Ver saldo" +
@@ -31,11 +32,16 @@ public class Entrada {
                         if (cantidad >= cuenta.getSaldo()){
                             System.out.println("Saldo Insuficiente");
                             cuenta.sacarTodo();
+
                             throw new Excepcion("Saldo Insuficiente");
                         }else {
                             cuenta.sacarDinero(cantidad);
                         }
                     }catch (Excepcion e){
+                        /*if (errores == null){
+                            errores = new ArrayList<>();
+                            inicio = true;
+                        }*/
                         errores.add(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()) +" "+ e.getMessage());
                     }
                     break;
@@ -43,9 +49,11 @@ public class Entrada {
                     System.out.println("El saldo de la cuenta es " + cuenta.getSaldo());
                     break;
                 case 4:
-                    for (String item: errores) {
-                        System.out.println(item);
-                    }
+                    //if(errores != null) {
+                        for (String item : errores) {
+                            System.out.println(item);
+                        }
+                    //}
                     break;
             }
         }while (opcion != -1);

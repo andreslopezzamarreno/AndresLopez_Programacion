@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public final class SupermercadoEspecifico<T> {
+public final class SupermercadoEspecifico<T ,V> {
 
     private ArrayList<T> listaGenero;
 
