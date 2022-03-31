@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Terreno {
 
     //variables
@@ -6,18 +8,23 @@ public class Terreno {
     private String orientacion;
 
     //constructores
-    public Terreno(Casa casa, int m2, int valoracion, String orientacion) {
-        this.casa = casa;
+    public Terreno(int m2, int valoracion, String orientacion) {
         this.m2 = m2;
         this.valoracion = valoracion;
         this.orientacion = orientacion;
     }
 
-    public Terreno() {
-    }
-
     //metodos
     public void revalorizarCasa(){
+        if(casa != null){
+            valoracion += (valoracion* 0.25);
+        }
+        if(casa.m2 >100){
+            valoracion += (valoracion* 0.3);
+        }
+        if(casa.pincina){
+            valoracion += (valoracion* 0.5);
+        }
 
     }
 
@@ -72,20 +79,19 @@ public class Terreno {
             this.pincina = pincina;
         }
 
-        public Casa() {
-        }
-
         //metodos
-        public void construirhabitacion(){
+        public void construirhabitacion(int metros){
 
         }
 
         public void construirPiscina(){
-
+            pincina = true;
         }
 
-        public void construirAnexo(){
-
+        public void construirAnexo(int metros){
+            if((m2 + metros)<Terreno.this.m2){
+                casa.m2 += metros;
+            }
         }
 
 
