@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Restaurante <T extends Pedido>{
+public final class Restaurante <T extends Pedido>{
 
     //variables
     private String nombre;
@@ -36,11 +36,7 @@ public class Restaurante <T extends Pedido>{
         for (int i = 0; i < listaPedidos.size(); i++) {
             System.out.println("\nPedido " + (i+1));
             listaPedidos.get(i).verFactura();
-
         }
-
-        /*System.out.println();
-        item.verFactura();*/
         System.out.println("\nEl total de la caja de "+ nombre + " es de " + caja + " €\n");
     }
 
@@ -96,7 +92,7 @@ public class Restaurante <T extends Pedido>{
         //metodos
         @Override
         public void calcularPrecioReal() {
-            precio += (precio * Constantes.IVA_COMIDA);
+            precio += (precio * IVA_COMIDA);
         }
 
         @Override
@@ -136,7 +132,7 @@ public class Restaurante <T extends Pedido>{
         //metodos
         @Override
         public void calcularPrecioReal() {
-            precio += (precio * Constantes.IVA_BEBIDAS);
+            precio += (precio * IVA_BEBIDAS);
         }
 
         @Override
