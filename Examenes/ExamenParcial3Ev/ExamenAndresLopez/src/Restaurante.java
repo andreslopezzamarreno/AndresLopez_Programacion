@@ -11,8 +11,6 @@ public class Restaurante <T extends Pedido>{
     public Restaurante(String nombre) {
         this.nombre = nombre;
         this.listaPedidos = new ArrayList<>();
-        this.caja = 0;
-        this.numeroComensaleTotales = 0;
     }
 
     //metodos
@@ -36,15 +34,14 @@ public class Restaurante <T extends Pedido>{
 
     public void verPedidos(){
         for (int i = 0; i < listaPedidos.size(); i++) {
-            System.out.println("PEDIDO " + (i+1));
+            System.out.println("\nPedido " + (i+1));
             listaPedidos.get(i).verFactura();
-            System.out.println();
+
         }
 
         /*System.out.println();
         item.verFactura();*/
-        System.out.println("El total de la caja es de " + caja);
-        System.out.println();
+        System.out.println("\nEl total de la caja de "+ nombre + " es de " + caja + " €\n");
     }
 
     //getter y setter
