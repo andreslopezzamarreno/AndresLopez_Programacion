@@ -61,7 +61,7 @@ public class EjercicioController {
         }
         System.out.println("Que opcion quieres");
         opcion = sc.nextInt();
-        if (opcion >= 0 && opcion<ficherosChild.length) {
+        if (opcion >= 0 && opcion<=ficherosChild.length) {
             if (ficherosChild[opcion].isDirectory()){
                 listarChild(ficherosChild[opcion]);
             }else {

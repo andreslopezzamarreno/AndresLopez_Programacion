@@ -1,7 +1,6 @@
 package Controller;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class FicherosController {
@@ -48,7 +47,57 @@ public class FicherosController {
 
     }
 
+    public void lecturaFichero(File file){
 
+        FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(file);
+            int lectura = 0;
+            while ((lectura =fileReader.read()) != -1){
+                System.out.println((char)lectura);
+            }
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                fileReader.close();
+            } catch (IOException | NullPointerException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void lecturaBuffer(File file){
+
+        BufferedReader bufferedReader = null;
+
+        try {
+            bufferedReader = new BufferedReader(new FileReader(file));
+            //String linea = bufferedReader.readLine();
+            //System.out.println(linea);
+            String todo ="";
+            String lectura = null;
+            while((lectura = bufferedReader.readLine()) != null){
+                todo += lectura + "\n";
+            }
+            System.out.println(todo);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void escrituraFichero(File file){
+        FileWriter fileWriter= null;
+        try {
+            fileWriter = new FileWriter(file);
+            fileWriter.write("klk manin");
+        }catch (IOException e){
+
+        }
+    }
 
 }
