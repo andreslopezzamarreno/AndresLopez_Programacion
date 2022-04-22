@@ -1,11 +1,12 @@
 package Controller;
 
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
 
 public class EjercicioController {
 
     Scanner sc = new Scanner(System.in);
+
     /*public void ejercicioListar(File file){
 
         int opcion;
@@ -70,5 +71,22 @@ public class EjercicioController {
         }else{
             System.out.println("Opcion incorrecta");
         }
+    }
+
+
+    /*hacer un programa que pida por consola una linea y la guarde en un fichero
+    el programa seguira pidinedo lineas e introduciendolas en el fichero
+    hasta que se pulse el 0
+    cuando no se quierea continuar se imprimira el contenido del fichero completo*/
+
+    public void ejercicioLecturaEscritura(){
+        int opcion = 0;
+        String linea = "";
+
+        do{
+            System.out.println("quieres crear mas lineas (0/1)");
+            opcion = sc.nextInt();
+
+        }while(opcion != 0);
     }
 }

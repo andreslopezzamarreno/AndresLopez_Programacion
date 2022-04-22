@@ -20,7 +20,6 @@ public class FicherosController {
                 e.printStackTrace();
             }
         }
-
     }
 
     public void getDirectoryInfo(File file){
@@ -42,9 +41,6 @@ public class FicherosController {
                 System.out.println(fichero.getName());
             }
         }
-
-
-
     }
 
     public void lecturaFichero(File file){
@@ -66,11 +62,9 @@ public class FicherosController {
                 e.printStackTrace();
             }
         }
-
     }
 
     public void lecturaBuffer(File file){
-
         BufferedReader bufferedReader = null;
 
         try {
@@ -87,7 +81,6 @@ public class FicherosController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void escrituraFichero(File file){
@@ -97,7 +90,9 @@ public class FicherosController {
             fileWriter.write("klk manin");
         }catch (IOException e){
 
+
         }
     }
+
 
 }

@@ -92,7 +92,7 @@ public final class Restaurante <T extends Pedido>{
         //metodos
         @Override
         public void calcularPrecioReal() {
-            precio += (precio * IVA_COMIDA);
+            precio += (precio * Constantes.IVA_COMIDA);
         }
 
         @Override
@@ -101,7 +101,7 @@ public final class Restaurante <T extends Pedido>{
             System.out.println("Numero Consumiciones: "+ numeroConsumiciones);
             System.out.println("Tipo: "+ tipoComida.toString());
             System.out.println("Nombre: "+ nombre);
-            System.out.println("CIF: "+ CIF);
+            System.out.println("CIF: "+ Constantes.CIF);
         }
 
         //getter y setter
@@ -132,7 +132,7 @@ public final class Restaurante <T extends Pedido>{
         //metodos
         @Override
         public void calcularPrecioReal() {
-            precio += (precio * IVA_BEBIDAS);
+            precio += (precio * Constantes.IVA_BEBIDAS);
         }
 
         @Override
@@ -141,7 +141,7 @@ public final class Restaurante <T extends Pedido>{
             System.out.println("Numero Consumiciones: "+ numeroConsumiciones);
             System.out.println("Tipo: "+ tipoBebidas.toString());
             System.out.println("Nombre: "+ nombre);
-            System.out.println("CIF: "+ CIF);
+            System.out.println("CIF: "+ Constantes.CIF);
 
         }
 

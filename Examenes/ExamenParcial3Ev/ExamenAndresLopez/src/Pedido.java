@@ -1,4 +1,6 @@
-public abstract class Pedido implements Constantes{
+public abstract class Pedido{
+    /*antes tenia implementada la interfaz 'Constantes'
+    a no ser que la interfaz tenga metodos no es necesario implementarla, simplemente se usa*/
 
     protected double precio;
     protected int numeroConsumiciones;
@@ -7,6 +9,7 @@ public abstract class Pedido implements Constantes{
     public Pedido(double precio, int numeroConsumiciones) {
         this.precio = precio;
         this.numeroConsumiciones = numeroConsumiciones;
+
     }
 
     public Pedido() {
