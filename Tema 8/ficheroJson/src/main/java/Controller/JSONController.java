@@ -1,11 +1,17 @@
 package Controller;
 
 import com.google.gson.Gson;
+import model.Asignatura;
 import model.Conocimiento;
+import model.Profesor;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 
 public class JSONController {
 
@@ -85,5 +91,130 @@ public class JSONController {
         }
 
     }
+
+    public void leerJSONAsignaturas(String ciclo, int curso){
+
+        File file = new File("src/main/resources/asignaturas.json");
+
+        BufferedReader br = null;
+        try {
+
+            br = new BufferedReader(new FileReader(file));
+            StringBuilder sb = new StringBuilder();
+            String linea = null;
+            while ((linea = br.readLine()) != null){
+                sb.append(linea);
+            }
+
+            JSONObject jsonAsignatura = new JSONObject(sb.toString());
+
+            JSONArray asignaturas = jsonAsignatura.getJSONArray("asignaturas");
+
+
+            for (int i = 0; i < asignaturas.length(); i++) {
+                JSONObject asignaturaJSON = asignaturas.getJSONObject(i);
+                Gson gson = new Gson();
+                Asignatura asignatura = gson.fromJson(asignaturaJSON.toString(), Asignatura.class);
+                //caracteristicaAsignatura(asignatura);
+
+                // Captura todas las asignaturas individuales y tener la posibilidad de
+                // tratarlas como objetos JAVA
+                // y ver su curso y su ciclo
+                // Pedir al usuario un curso y un ciclo del que quiere ver las asignturas
+                // dam
+                // 1
+                // si se introduce un curso que no esta en el JSON, el sistema indica CURSO NO ENCONTRADO
+                // el sistema deber mostrar las asignaturas del ciclo y curso pedido con el siguiente formato
+                // Nombre: XX
+                // Profesor: NOM AP
+                // Sigras: XX
+                // Duracion: XX
+                // Conocimientos: XX,XX,XX
+
+                if (asignatura.getCiclo().contains(ciclo) && asignatura.getCurso()== curso){
+                    caracteristicaAsignatura(asignatura);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void caracteristicaAsignatura(Asignatura asignatura){
+        Profesor profesor2 = asignatura.getProfesor();
+        System.out.println("Nombre: " +asignatura.getNombre());
+        System.out.println("Profesor:");
+        System.out.println("\tnombre: "+profesor2.getNombre());
+        System.out.println("\tapellido: " +profesor2.getApellido());
+        System.out.println("siglas: " +asignatura.getSiglas());
+        System.out.println("horas: "+asignatura.getHora());
+        System.out.println("Conocimientos:");
+        for (String item: asignatura.getConocimientos()) {
+            System.out.println("\t" +item);
+        }
+        System.out.println();
+    }
+
+
+    public void lecturaJsonApi(){
+        String urlString = "https://randomuser.me/api/?results=5";
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+
+            String lectura = bufferedReader.readLine();
+
+            JSONObject jsonObject = new JSONObject(lectura);
+
+            System.out.println(jsonObject);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void lecturaUsers(){
+        String urlString = "https://randomuser.me/api/?results=2";
+
+        try {
+            URL url = new URL(urlString);
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            BufferedReader bufferedReader;
+
+            bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+
+            String response = bufferedReader.readLine();
+
+            JSONObject responseJson = new JSONObject(response);
+
+            JSONArray arrayResultados = responseJson.getJSONArray("results");
+
+            for (int i = 0; i <arrayResultados.length() ; i++) {
+                JSONObject objetoResultado = arrayResultados.getJSONObject(i);
+                String mail = objetoResultado.getString("email");
+                System.out.println(mail);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 }

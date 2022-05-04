@@ -7,6 +7,9 @@ public class Main {
         JSONController controller = new JSONController();
 
         //controller.pasarStringJSON();
-        controller.leerFicheroJSON();
+        //controller.leerJSONAsignaturas("DAW",2);
+
+        //controller.lecturaJsonApi();
+        controller.lecturaUsers();
     }
 }

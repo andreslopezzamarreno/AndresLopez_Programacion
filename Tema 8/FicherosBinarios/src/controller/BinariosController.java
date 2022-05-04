@@ -10,7 +10,6 @@ public class BinariosController {
         File file = new File("src/resources/objetos.bin");
         ObjectOutputStream oos = null;
         // hay que cerrar el ultimo de la cola, en este caso oos
-
         try {
             oos = new ObjectOutputStream(new FileOutputStream(file));
             oos.writeObject(new Usuario("Andres","Lopez","1234A"));
@@ -26,8 +25,6 @@ public class BinariosController {
                 e.printStackTrace();
             }
         }
-
-
     }
 
     public void lecturaBinario(){

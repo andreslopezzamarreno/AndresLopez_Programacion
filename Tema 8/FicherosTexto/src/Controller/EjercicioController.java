@@ -27,7 +27,6 @@ public class EjercicioController {
         }while (true);
     }*/
 
-
     public void listParentDirectory(){
         File file = new File("C:/Users/asus/OneDrive/Escritorio/Ficheros");
         File[] ficherosParent = file.listFiles();
@@ -73,6 +72,22 @@ public class EjercicioController {
         }
     }
 
+    public void cifrarLinea(){
+        String lineaEscribir = "Esto es un ejemplo de una linea a escribir dentro del fichro";
+        String[] letras= lineaEscribir.split("");
+        for (String letra:letras) {
+            int codigo = (byte)letra.charAt(0);
+            int codigoCifrado = codigo*2;
+            char caracterCifrado = (char) codigoCifrado;
+            System.out.println(caracterCifrado);
+        }
+        /*
+        char letra = 'u';
+        int cifrado = ((byte)letra)*2;
+        System.out.println((char)cifrado);
+*/
+
+    }
 
     /*hacer un programa que pida por consola una linea y la guarde en un fichero
     el programa seguira pidinedo lineas e introduciendolas en el fichero
