@@ -34,6 +34,7 @@ public class ControllerBD {
             e.printStackTrace();
         }
     }
+
     public void insertarAlumno(){
         String nombre = "Borja";
         String apellido = "Martin";
@@ -131,7 +132,7 @@ public class ControllerBD {
             getConnection();
             //no ejecuta la query --> solo comprueba
             statement = conn.createStatement();
-            String query = String.format("DELETE FROM %s WHERE %s = %d",SchemaDB.TAB_ALU,SchemaDB.COL_EDAD,edad);
+            String query = String.format("DELETE FROM %s WHERE %s < %d",SchemaDB.TAB_ALU,SchemaDB.COL_EDAD,edad);
             int numTuplas = statement.executeUpdate(query);
             System.out.println("Se han modificado " + numTuplas + " tuplas");
         } catch (SQLException e) {
@@ -146,5 +147,7 @@ public class ControllerBD {
         }
     }
 
+    public void select(){
 
+    }
 }
