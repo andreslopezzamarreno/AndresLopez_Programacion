@@ -4,6 +4,7 @@ import database.SchemaDB;
 import model.Alumno;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class ControllerBD {
 
@@ -12,6 +13,8 @@ public class ControllerBD {
     private Statement statement;
     //CRUD -> create read update delete
     private PreparedStatement preparedStatement;
+    private ResultSet resultSet;
+    private ArrayList arrayList = new ArrayList<>();
 
     private void getConnection(){
         String host = SchemaDB.URL_SERVER;
@@ -147,7 +150,42 @@ public class ControllerBD {
         }
     }
 
-    public void select(){
+    public void getResultados(){
+        getConnection();
+        try {
+            statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+            String query = "Select * from " + SchemaDB.TAB_ALU;
+            resultSet = statement.executeQuery(query);
+            // .getRow() -> la posicion donde estas ubicado
 
+            System.out.println(resultSet.last());
+            System.out.println(resultSet.getRow());
+
+            /*
+            while (resultSet.next()){
+
+                String nombre= resultSet.getString(SchemaDB.COL_NOMBRE);
+                String apellido= resultSet.getString(SchemaDB.COL_APELLIDO);
+                int edad = resultSet.getInt(SchemaDB.COL_EDAD);
+                int id = resultSet.getInt(SchemaDB.COL_ID);
+                Alumno alumno = new Alumno(nombre,apellido,edad);
+                arrayList.add(alumno);
+                System.out.println(alumno.getNombre());
+                System.out.println(alumno.getApellido());
+                System.out.println(alumno.getEdad());
+            }
+
+             */
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                statement.close();
+                closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

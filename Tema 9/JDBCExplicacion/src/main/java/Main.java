@@ -36,8 +36,12 @@ public class Main {
         edad = sc.nextInt();
         controllerBD.cambiarEdad(nombre,edad);
  */
+        /*
         System.out.println("Edad de los usuarios que quieres borrar");
         edad = sc.nextInt();
         controllerBD.borrarUsuario(edad);
+
+         */
+        controllerBD.getResultados();
     }
 }
