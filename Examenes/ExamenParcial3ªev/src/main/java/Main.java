@@ -13,10 +13,14 @@ public class Main {
         Ejercicio1Controller ejercicio1 = new Ejercicio1Controller();
         ejercicio1.leerFichero();
 
-        //Ejercicio 2
+
+
+      //Ejercicio 2
         Ejercicio2Controller ejercicio2 = new Ejercicio2Controller();
         ejercicio2.mostrarCaracteristicas();
-*/
+
+ */
+
         //Ejercicio 3
         int opcion;
         Ejercicio3Controller ejercicio3 = new Ejercicio3Controller();
