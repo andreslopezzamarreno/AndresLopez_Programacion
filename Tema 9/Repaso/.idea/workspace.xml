@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb79ba93-b1d9-4489-bae6-9c101c1a8677" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/resources/Cartelera.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/resources/Cartelera.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/resources/proximamente.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/src/main/resources/proximamente.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/Cartelera.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/Cartelera.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/proximamente.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/ExamenParcial3ªev/target/classes/proximamente.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/ExamenFinal/ANDRES_LOPEZ_EXAMEN/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/ExamenFinal/ANDRES_LOPEZ_EXAMEN/src/main/java/controller/EjercicioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/ExamenFinal/ANDRES_LOPEZ_EXAMEN/src/main/java/model/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
