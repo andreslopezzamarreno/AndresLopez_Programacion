@@ -1,6 +1,3 @@
-# AndresLopez_Programacion
+# Welcome to  AndresLopez_Programacion
 
-## cambio local 
-
-### Cambio desde repositorio de red
-
+This is a programming subject repository of 1º of DAM (Desarrollo de Aplicaciones Multiplataforma in spanish)
