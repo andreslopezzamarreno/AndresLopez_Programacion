@@ -1,4 +1,5 @@
 public class Entrada {
+
     //varibles de clases
     String nombre = "Andres";
     int edad = 18;
@@ -6,8 +7,6 @@ public class Entrada {
 
     //metodos
     public static void main(String[] args) {
-
-
         // System.out.println(nombre);
         new Entrada().saludar("Andres");
         //saludar("pepe");
